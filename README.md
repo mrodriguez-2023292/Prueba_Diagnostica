@@ -71,7 +71,7 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 
 ## Endpoints
 
-## Carpeta Auth:
+## Carpeta Auth
 
 ### - Registar Clientes
 
@@ -137,7 +137,7 @@ El proyecto incluye los siguientes datos de clientes para pruebas:
 
 ---
 
-## Carpeta Admins:
+## Carpeta Admins
 
 ### Autenticación para Admin
 
