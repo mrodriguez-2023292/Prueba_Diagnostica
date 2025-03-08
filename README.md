@@ -102,12 +102,9 @@ Ejemplo:
 | POST    | `/auth/loginAdmin`     | Login del admin |
 
 Ahora bien, el admin se crea al iniciar el proyecto. Su usuario y contraseña son los siguientes:
-```json
-{
-    "username": "admin_master",
-    "password": "Dm@n1234"
-}
-```
+| **Nombre** | **Apellido** | **Username**   | **Email**                    | **Teléfono** | **Contraseña**   |
+|------------|--------------|----------------|------------------------------|--------------|------------------|
+| Admin       | Principal        | admin_master      | admin@example.com        | 12345678     | Dm@n1234         |
 
 ## Datos de Clientes
 
