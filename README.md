@@ -1,7 +1,3 @@
-¡Claro! He mejorado la redacción, corregido errores y agregado la sección de los clientes con el formato de tabla. Aquí tienes el **README.md** actualizado y mejorado:
-
----
-
 # Proyecto Final de Programación
 
 ## Descripción
