@@ -11,7 +11,7 @@ La aplicación se estructura en dos secciones principales:
 - **NodeJS** con **Express.js** para la creación de la API.
 - **MongoDB** o **MySQL** para la gestión de datos.
 - **JWT** para la autenticación y autorización de usuarios.
-- **bcrypt** para el manejo seguro de contraseñas.
+- **argon2** para el manejo seguro de contraseñas.
 - **Swagger** para documentación de la API.
 
 ## Instalación
@@ -38,7 +38,11 @@ Como primer paso, el usuario o la persona que va a usar el programa tendrá que 
 
 Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpeta que se creó se abre el **cmd** y en el **cmd** se hace lo siguiente:
 
-**Imagen**
+![image](https://github.com/user-attachments/assets/bd3e11dd-01d1-49c4-bc07-ec87109fdd5f)
+
+![image](https://github.com/user-attachments/assets/782e7597-cb40-4479-9f84-d0f36cc8bf6f)
+
+![image](https://github.com/user-attachments/assets/dc75f640-364f-4615-ae2c-55558b32d8f5)
 
 1. Se instalan las dependencias necesarias del proyecto con el siguiente comando:
    ```bash
@@ -82,6 +86,8 @@ Ejemplo:
 }
 ```
 
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
 | POST    | `/auth/loginClient`    | Login del cliente |
 
 Ejemplo:
@@ -91,7 +97,8 @@ Ejemplo:
     "password": "Lui$7890"
 }
 ```
-
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
 | POST    | `/auth/loginAdmin`     | Login del admin |
 
 Ahora bien, el admin se crea al iniciar el proyecto. Su usuario y contraseña son los siguientes:
