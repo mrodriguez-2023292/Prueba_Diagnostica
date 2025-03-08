@@ -238,17 +238,25 @@ Ahora bien, el admin se crea al iniciar el proyecto. Su usuario y contraseña so
 }
 ```
 
-Ejemplo:
-```json
-{
-    "username": "luisperez",
-    "password": "Lui$7890"
-}
-```
+## Datos de Clientes
 
-| GET     | `/products`            | Obtener lista de productos |
-| POST    | `/products`            | Agregar un producto (admin) |
-| GET     | `/sales`               | Obtener lista de ventas (admin) |
+El proyecto ya incluye los siguientes datos de clientes para su uso:
+
+| **Nombre** | **Apellido** | **Username**   | **Email**                    | **Teléfono** | **Contraseña**   |
+|------------|--------------|----------------|------------------------------|--------------|------------------|
+| Luis       | Perez        | luisperez      | luis.perez@example.com        | 56473829     | Lui$7890         |
+| Carlos     | Gomez        | carlosgomez    | carlos.gomez@example.com      | 75395142     | Carlos1234!      |
+| Ana        | Lopez        | analopez       | ana.lopez@example.com         | 87456239     | Ana@2023         |
+| Javier     | Martinez     | javiermartinez | javier.martinez@example.com   | 12345678     | Javi#9876        |
+| María      | Fernández    | mariafdez      | maria.fernandez@example.com   | 98765432     | Maria_2024       |
+| Roberto    | Hernandez    | roberthernandez| roberto.hernandez@example.com | 11223344     | R0b3rto!56       |
+| Sofia      | Perez        | sofiaperez     | sofia.perez@example.com       | 55667788     | Sofía123#        |
+| David      | Ruiz         | davidruiz      | david.ruiz@example.com        | 99887766     | D@vid2023        |
+| Lucia      | Sanchez      | luciasanchez   | lucia.sanchez@example.com     | 66554433     | Luci@2019        |
+| Pedro      | Diaz         | pedrodiac      | pedro.diaz@example.com        | 44556677     | P3dro_987        |
+| Laura      | Martínez     | lauramartinez  | laura.martinez@example.com    | 22334455     | L@ura1234        |
+
+---
 
 ## Contribuir
 Si deseas contribuir al proyecto, puedes hacer un **fork** del repositorio y enviar un **pull request** con tus mejoras.
