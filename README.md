@@ -126,9 +126,6 @@ El proyecto ya incluye los siguientes datos de clientes para su uso:
 
 ---
 
-## Contribuir
-Si deseas contribuir al proyecto, puedes hacer un **fork** del repositorio y enviar un **pull request** con tus mejoras.
-
 ## Licencia
 Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo LICENSE en el repositorio.
 
