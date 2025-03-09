@@ -71,6 +71,8 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 
 ## Endpoints
 
+---
+
 ### Carpeta Auth:
 
 | Método | Endpoint            | Descripción           |
