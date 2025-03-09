@@ -79,7 +79,7 @@ Después de la última /, es cuando ya se pueden hacer diferentes acciones o mé
 | POST    | /auth/registerClient | Registro del cliente |
 
 Ejemplo:
-json
+```json
 {
     "name": "Luis",
     "surname": "Perez",
@@ -88,6 +88,7 @@ json
     "phone": "56473829",
     "password": "Lui$7890"
 }
+```
 
 
 | Método | Endpoint               | Descripción |
@@ -95,11 +96,12 @@ json
 | POST    | /auth/loginClient    | Login del cliente |
 
 Ejemplo:
-json
+```json
 {
     "username": "luisperez",
     "password": "Lui$7890"
 }
+```
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
