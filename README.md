@@ -67,7 +67,6 @@ En los endpoints, la ruta base para poder hacer todas las peticiones es:
 
 http://127.0.0.1:3000/storeSystem/v1/
 
-
 Después de la última /, es cuando ya se pueden hacer diferentes acciones o métodos.
 
 ## Endpoints
