@@ -38,12 +38,6 @@ Como primer paso, el usuario o la persona que va a usar el programa tendrá que 
 
 Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpeta que se creó se abre el **cmd** y en el **cmd** se hace lo siguiente:
 
-![image](https://github.com/user-attachments/assets/bd3e11dd-01d1-49c4-bc07-ec87109fdd5f)
-
-![image](https://github.com/user-attachments/assets/782e7597-cb40-4479-9f84-d0f36cc8bf6f)
-
-![image](https://github.com/user-attachments/assets/dc75f640-364f-4615-ae2c-55558b32d8f5)
-
 1. Se instalan las dependencias necesarias del proyecto con el siguiente comando:
    ```bash
    npm i
@@ -97,6 +91,7 @@ Ejemplo:
     "password": "Lui$7890"
 }
 ```
+
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | POST    | `/auth/loginAdmin`     | Login del admin |
@@ -117,15 +112,59 @@ El proyecto ya incluye los siguientes datos de clientes para su uso:
 | Ana        | Lopez        | analopez       | ana.lopez@example.com         | 87456239     | Ana@2023         |
 | Javier     | Martinez     | javiermartinez | javier.martinez@example.com   | 12345678     | Javi#9876        |
 | María      | Fernández    | mariafdez      | maria.fernandez@example.com   | 98765432     | Maria_2024       |
-| Roberto    | Hernandez    | roberthernandez| roberto.hernandez@example.com | 11223344     | R0b3rto!56       |
-| Sofia      | Perez        | sofiaperez     | sofia.perez@example.com       | 55667788     | Sofía123#        |
-| David      | Ruiz         | davidruiz      | david.ruiz@example.com        | 99887766     | D@vid2023        |
-| Lucia      | Sanchez      | luciasanchez   | lucia.sanchez@example.com     | 66554433     | Luci@2019        |
-| Pedro      | Diaz         | pedrodiac      | pedro.diaz@example.com        | 44556677     | P3dro_987        |
-| Laura      | Martínez     | lauramartinez  | laura.martinez@example.com    | 22334455     | L@ura1234        |
 
 ---
 
-## Licencia
-Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo LICENSE en el repositorio.
+## Carpeta Admin:
+
+### Usuarios
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | `/admin/addUser` | Agregar un usuario(cliente) |
+
+Ejemplo:
+```json
+{
+    "name": "Carlos",
+    "surname": "Gomez",
+    "username": "carlosgomez",
+    "email": "carlos.gomez@example.com",
+    "phone": "12345678",
+    "password": "passWo#d123"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| GET    | `/admin/getUsers` | Listar todos los usuarios existentes del programa |
+
+Para las operaciones de admin, se requiere autenticación con token. El token se obtiene tras el login del admin:
+
+Ejemplo de respuesta:
+```json
+{
+    "message": "Inicio de sesión exitoso",
+    "userData": {
+        "token": "<TOKEN_AQUI>"
+    }
+}
+```
+
+Este token se debe incluir en las peticiones para endpoints de admin.
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| PATCH    | `/admin/editRoleUser/:cid` | Cambiar rol de usuario |
+
+Ejemplo:
+```json
+{
+    "role": "ADMIN_ROLE"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| DELETE  | `/admin/deleteUser/:cid` | Eliminar un usuario |
 
