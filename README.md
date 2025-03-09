@@ -133,9 +133,6 @@ El proyecto incluye los siguientes datos de clientes para pruebas:
 
 ---
 
-Este README ha sido corregido y formateado para mejorar la claridad, eliminando errores de código y asegurando un formato coherente.
-
-
 ### Carpeta Admin:
 
 #### Autenticación para Admin
