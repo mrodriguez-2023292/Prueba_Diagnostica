@@ -73,6 +73,8 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 
 ### Carpeta Auth:
 
+#### - Registar Clientes
+
 | Método | Endpoint            | Descripción           |
 |---------|---------------------|-------------------------|
 | POST    | /auth/registerClient | Registro del cliente    |
@@ -90,6 +92,8 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 }
 ```
 
+#### - Login del Clientes
+
 | Método | Endpoint          | Descripción         |
 |---------|-----------------|---------------------|
 | POST    | /auth/loginClient | Login del cliente  |
@@ -102,6 +106,8 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
     "password": "Lui$7890"
 }
 ```
+
+#### - Login del Admin
 
 | Método | Endpoint         | Descripción      |
 |---------|----------------|----------------|
@@ -159,6 +165,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 
 #### - Usuarios
 
+#### - Agregar Usuarios
+
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | POST    | /admin/addUser | Agregar un usuario (cliente) |
@@ -180,7 +188,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 |---------|------------------------|-------------|
 | GET    | /admin/getUsers | Listar todos los usuarios existentes del programa |
 
-#### - Modificación de Usuarios
+#### - Modificación del Role de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -192,6 +200,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "role": "ADMIN_ROLE"
 }
 ```
+
+#### - Modificación del Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -209,6 +219,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
+#### - Eliminación de Usuarios
+
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | DELETE  | /admin/deleteUser/:cid | Eliminar un usuario |
@@ -216,6 +228,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 ---
 
 ### - Categorías
+
+#### - Agregar Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -228,9 +242,13 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
+#### - Listado de Categorias
+
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | GET     | /category/getCategories | Listar todas las categorías |
+
+#### - Modificación de Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -243,6 +261,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "description": "En esta categoría solo se encontrarán cosas de plomería"
 }
 ```
+#### - Eliminación de Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -251,6 +270,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 ---
 
 ### - Productos
+
+#### - Agregar Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -267,9 +288,13 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
+#### - Listado de productos
+
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | GET     | /product/getProducts   | Listar todos los productos |
+
+#### - Modificación de Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -285,6 +310,8 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "category": "Electrónica"
 }
 ```
+
+#### - Eliminación de Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
