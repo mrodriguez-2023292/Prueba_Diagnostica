@@ -319,7 +319,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 
 ---
 
-## Carpeta Clients:
+## Carpeta Clients
 
 ### - Listado de Productos para los Clientes
 
