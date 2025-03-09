@@ -139,7 +139,7 @@ El proyecto incluye los siguientes datos de clientes para pruebas:
 
 ---
 
-### Carpeta Admin:
+### Carpeta Admins:
 
 #### Autenticación para Admin
 
@@ -318,3 +318,42 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 | DELETE  | /product/deleteProduct/:id | Eliminar un producto |
 
 ---
+
+### Carpeta Clients:
+
+#### - Listado de Productos para los Clientes
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| GET    | /client/productExploration    | Ver todos los productos |
+
+Aquí no solo se listan los productos de forma normal si no que se pueden buscar por el nombre del producto y por categoria:
+
+![image](https://github.com/user-attachments/assets/7d285643-60d7-4bca-808d-be7b4520b3c6)
+
+#### - Añadir carrito para el Cliente
+
+### Autenticación para Cliente
+
+Para comenzar comprando cosas se tiene que conseguir un carrito pero para eso se requiere la autenticación del cliente mediante token, obtenido al iniciar sesión:
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /auth/loginClient     | Login de los clientes |
+
+**Resultado:**
+```json
+{
+    "message": "Inicio de sesión exitoso",
+    "userData": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaWQiOiI2N2NkMDY1ZWMzZTNkMjBjYTI0ZDJhNmEiLCJpYXQiOjE3NDE0OTAzMjEsImV4cCI6MTc0MTQ5MzkyMX0.OGEzTuGuvf6WTSldGNPyqRLusuJvD5Qn-1x0zEUakJY"
+    }
+}
+```
+
+Este token debe incluirse en los encabezados de las solicitudes a los endpoints al igual que los admins para tener cierta seguridad en el programa.
+
+![image](https://github.com/user-attachments/assets/17806c0a-be6d-43d1-b8b9-bb5a66174a7c)
+
+
+
