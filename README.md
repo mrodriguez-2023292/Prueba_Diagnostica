@@ -37,6 +37,18 @@ La aplicación se estructura en dos secciones principales:
 
 ## Cómo iniciar el proyecto
 
+Como primer paso, el usuario o la persona que va a usar el programa tendrá que copiar el link del repositorio, el cual es el siguiente:
+
+[https://github.com/mrodriguez-2023292/PB-2023292.git](https://github.com/mrodriguez-2023292/PB-2023292.git)
+
+Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpeta que se creó se abre el **cmd** y en el **cmd** se hace lo siguiente:
+
+![image](https://github.com/user-attachments/assets/bd3e11dd-01d1-49c4-bc07-ec87109fdd5f)
+
+![image](https://github.com/user-attachments/assets/782e7597-cb40-4479-9f84-d0f36cc8bf6f)
+
+![image](https://github.com/user-attachments/assets/dc75f640-364f-4615-ae2c-55558b32d8f5)
+
 1. Una vez clonado el repositorio, abre una terminal en la carpeta creada y ejecuta el siguiente comando para instalar las dependencias necesarias:
 
    ```bash
