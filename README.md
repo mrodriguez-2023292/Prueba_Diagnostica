@@ -71,8 +71,6 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 
 ## Endpoints
 
----
-
 ### Carpeta Auth:
 
 | Método | Endpoint            | Descripción           |
@@ -293,6 +291,3 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 | DELETE  | /product/deleteProduct/:id | Eliminar un producto |
 
 ---
-
-Esta documentación detalla los endpoints de la sección de administración, cubriendo usuarios, categorías y productos. Si necesitas agregar más detalles o modificar algo, avísame.
-
