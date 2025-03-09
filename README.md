@@ -201,7 +201,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Modificación del Usuarios
+#### - Modificación de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
