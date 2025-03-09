@@ -331,9 +331,9 @@ Aquí no solo se listan los productos de forma normal si no que se pueden buscar
 
 ![image](https://github.com/user-attachments/assets/7d285643-60d7-4bca-808d-be7b4520b3c6)
 
-#### - Añadir carrito para el Cliente
+### - Añadir carrito para el Cliente
 
-### Autenticación para Cliente
+#### Autenticación para Cliente
 
 Para comenzar comprando cosas se tiene que conseguir un carrito pero para eso se requiere la autenticación del cliente mediante token, obtenido al iniciar sesión:
 
