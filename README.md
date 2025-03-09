@@ -71,16 +71,15 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 
 ## Endpoints
 
-### Carpeta Auth:
+## Carpeta Auth:
 
-#### - Registar Clientes
+### - Registar Clientes
 
 | Método | Endpoint            | Descripción           |
 |---------|---------------------|-------------------------|
 | POST    | /auth/registerClient | Registro del cliente    |
 
-#### Ejemplo de petición:
-
+**Ejemplo:**
 ```json
 {
     "name": "Luis",
@@ -92,14 +91,13 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 }
 ```
 
-#### - Login del Clientes
+### - Login del Clientes
 
 | Método | Endpoint          | Descripción         |
 |---------|-----------------|---------------------|
 | POST    | /auth/loginClient | Login del cliente  |
 
-#### Ejemplo de petición:
-
+**Ejemplo:**
 ```json
 {
     "username": "luisperez",
@@ -107,7 +105,7 @@ Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpe
 }
 ```
 
-#### - Login del Admin
+### - Login del Admin
 
 | Método | Endpoint         | Descripción      |
 |---------|----------------|----------------|
@@ -119,7 +117,7 @@ El usuario administrador se crea automáticamente al iniciar el proyecto. Sus cr
 |------------|--------------|---------------|--------------------------|--------------|------------------|
 | Admin      | Principal    | admin_master  | admin@example.com       | 12345678     | Dm@n1234         |
 
-## Datos de Clientes
+### Datos de Clientes
 
 El proyecto incluye los siguientes datos de clientes para pruebas:
 
@@ -139,9 +137,9 @@ El proyecto incluye los siguientes datos de clientes para pruebas:
 
 ---
 
-### Carpeta Admins:
+## Carpeta Admins:
 
-#### Autenticación para Admin
+### Autenticación para Admin
 
 Para acceder a los endpoints de administración, se requiere autenticación mediante token, obtenido al iniciar sesión como admin:
 
@@ -163,9 +161,9 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 
 ![image](https://github.com/user-attachments/assets/64839012-62f3-4f79-bd9c-944cf33109b2)
 
-#### - Usuarios
+## - Usuarios
 
-#### - Agregar Usuarios
+### - Agregar Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -182,13 +180,13 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "password": "passWo#d123"
 }
 ```
-#### - Listado de Usuarios
+### - Listado de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | GET    | /admin/getUsers | Listar todos los usuarios existentes del programa |
 
-#### - Modificación del Role de Usuarios
+### - Modificación del Role de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -201,7 +199,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Modificación de Usuarios
+### - Modificación de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -219,7 +217,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Eliminación de Usuarios
+### - Eliminación de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -227,9 +225,9 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 
 ---
 
-### - Categorías
+## - Categorías
 
-#### - Agregar Categorias
+### - Agregar Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -242,13 +240,13 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Listado de Categorias
+### - Listado de Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | GET     | /category/getCategories | Listar todas las categorías |
 
-#### - Modificación de Categorias
+### - Modificación de Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -261,7 +259,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "description": "En esta categoría solo se encontrarán cosas de plomería"
 }
 ```
-#### - Eliminación de Categorias
+### - Eliminación de Categorias
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -269,9 +267,9 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 
 ---
 
-### - Productos
+## - Productos
 
-#### - Agregar Productos
+### - Agregar Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -288,13 +286,13 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Listado de productos
+### - Listado de productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
 | GET     | /product/getProducts   | Listar todos los productos |
 
-#### - Modificación de Productos
+### - Modificación de Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -311,7 +309,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
 }
 ```
 
-#### - Eliminación de Productos
+### - Eliminación de Productos
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
@@ -351,9 +349,79 @@ Para comenzar comprando cosas se tiene que conseguir un carrito pero para eso se
 }
 ```
 
-Este token debe incluirse en los encabezados de las solicitudes a los endpoints al igual que los admins para tener cierta seguridad en el programa.
+Este token debe incluirse en los encabezados de las solicitudes a los endpoints al igual que los admins para tener cierta seguridad en el programa. Este token iria en todas las solicitudes de Client, aclaro.
 
 ![image](https://github.com/user-attachments/assets/17806c0a-be6d-43d1-b8b9-bb5a66174a7c)
 
+Y ahora si se puede agregar un carrito con el token del cliente:
 
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /shoppingCart/addCart     | Agregar carrito |
+
+### - Añadir productos al carrito del Cliente
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /shoppingCart/addProduct/:id(id del carrito)     | Agregar productos al carrito |
+
+**Ejemplo:**
+```json
+{
+  "product": "id(se coloca el id del producto que se desea agregar)",
+  "name": "nombre del producto que quiere agregar",
+  "price": Su precio,
+  "quantity": La cantidad que se quiere llevar de ese producto
+}
+```
+
+### - Generar factura del Client
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /invoice/generateInvoice/:id(id del carrito)     | Genera una factura de todo el carrito en pdf |
+
+El PDF se guarda aquí:
+
+![image](https://github.com/user-attachments/assets/6b7bf0ed-e5e4-47ff-9c07-d68a1095b986)
+
+### - Historial del cliente
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| GET    | /client/clientHistory  | Lista todas las facturas del cliente |
+
+Aquí se obtiene el historial del cliente mediante el token del cliente.
+
+![image](https://github.com/user-attachments/assets/d8bf937c-cf42-4c01-aa35-44974639d834)
+
+### - Editar perfil del Cliente
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| PUT    | /client/editProfile  | Modificación del cliente |
+
+**Ejemplo:**
+```json
+{
+    "name": "Carlos",
+    "surname": "Martinez",
+    "username": "carlosm23",
+    "email": "carlos.martinez@example.com",
+    "phone": "12345678"
+}
+```
+
+Aquí de igual manera que en el apartado anterior se necesita el token del cliente para la modificación de su usuario.
+
+### - Eliminar cuenta
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| DELETE    | /client/deleteAccount  | Eliminación de la cuenta |
+
+Aquí de igual manera que en el apartado anterior se necesita el token del cliente para la eliminación de su usuario.
+
+## Licencia
+Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo LICENSE en el repositorio.
 
