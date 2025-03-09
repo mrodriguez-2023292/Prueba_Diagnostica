@@ -174,6 +174,7 @@ Este token debe incluirse en los encabezados de las solicitudes a los endpoints 
     "password": "passWo#d123"
 }
 ```
+#### - Listado de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
