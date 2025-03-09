@@ -16,19 +16,22 @@ La aplicación se estructura en dos secciones principales:
 
 ## Instalación
 1. Clona el repositorio:
-   ```bash
+   
+bash
    git clone https://github.com/tu-usuario/nombre-del-repositorio.git
-   ```
+
 2. Instala las dependencias:
-   ```bash
+   
+bash
    cd nombre-del-repositorio
    npm install
-   ```
-3. Configura las variables de entorno en un archivo `.env`.
+
+3. Configura las variables de entorno en un archivo .env.
 4. Inicia el servidor:
-   ```bash
+   
+bash
    npm start
-   ```
+
 
 ## Cómo iniciar el proyecto
 
@@ -38,27 +41,34 @@ Como primer paso, el usuario o la persona que va a usar el programa tendrá que 
 
 Ahora que se haya creado una carpeta con el nombre del repositorio, en esa carpeta que se creó se abre el **cmd** y en el **cmd** se hace lo siguiente:
 
+![image](https://github.com/user-attachments/assets/bd3e11dd-01d1-49c4-bc07-ec87109fdd5f)
+
+![image](https://github.com/user-attachments/assets/782e7597-cb40-4479-9f84-d0f36cc8bf6f)
+
+![image](https://github.com/user-attachments/assets/dc75f640-364f-4615-ae2c-55558b32d8f5)
+
 1. Se instalan las dependencias necesarias del proyecto con el siguiente comando:
-   ```bash
+   
+bash
    npm i
-   ```
+
 
 Ya que se hayan instalado todas las dependencias, se puede inicializar el proyecto.
 
 2. Para iniciar el proyecto, usa el siguiente comando:
-   ```bash
+   
+bash
    npm run dev
-   ```
+
 
 3. Abrir la colección de endpoints:
 
 En los endpoints, la ruta base para poder hacer todas las peticiones es:
 
-```
 http://127.0.0.1:3000/storeSystem/v1/
-```
 
-Después de la última `/`, es cuando ya se pueden hacer diferentes acciones o métodos.
+
+Después de la última /, es cuando ya se pueden hacer diferentes acciones o métodos.
 
 ## Endpoints
 
@@ -66,10 +76,10 @@ Después de la última `/`, es cuando ya se pueden hacer diferentes acciones o m
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| POST    | `/auth/registerClient` | Registro del cliente |
+| POST    | /auth/registerClient | Registro del cliente |
 
 Ejemplo:
-```json
+json
 {
     "name": "Luis",
     "surname": "Perez",
@@ -78,23 +88,22 @@ Ejemplo:
     "phone": "56473829",
     "password": "Lui$7890"
 }
-```
+
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| POST    | `/auth/loginClient`    | Login del cliente |
+| POST    | /auth/loginClient    | Login del cliente |
 
 Ejemplo:
-```json
+json
 {
     "username": "luisperez",
     "password": "Lui$7890"
 }
-```
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| POST    | `/auth/loginAdmin`     | Login del admin |
+| POST    | /auth/loginAdmin     | Login del admin |
 
 Ahora bien, el admin se crea al iniciar el proyecto. Su usuario y contraseña son los siguientes:
 | **Nombre** | **Apellido** | **Username**   | **Email**                    | **Teléfono** | **Contraseña**   |
@@ -112,18 +121,44 @@ El proyecto ya incluye los siguientes datos de clientes para su uso:
 | Ana        | Lopez        | analopez       | ana.lopez@example.com         | 87456239     | Ana@2023         |
 | Javier     | Martinez     | javiermartinez | javier.martinez@example.com   | 12345678     | Javi#9876        |
 | María      | Fernández    | mariafdez      | maria.fernandez@example.com   | 98765432     | Maria_2024       |
+| Roberto    | Hernandez    | roberthernandez| roberto.hernandez@example.com | 11223344     | R0b3rto!56       |
+| Sofia      | Perez        | sofiaperez     | sofia.perez@example.com       | 55667788     | Sofía123#        |
+| David      | Ruiz         | davidruiz      | david.ruiz@example.com        | 99887766     | D@vid2023        |
+| Lucia      | Sanchez      | luciasanchez   | lucia.sanchez@example.com     | 66554433     | Luci@2019        |
+| Pedro      | Diaz         | pedrodiac      | pedro.diaz@example.com        | 44556677     | P3dro_987        |
+| Laura      | Martínez     | lauramartinez  | laura.martinez@example.com    | 22334455     | L@ura1234        |
 
----
+### Carpeta Admin:
 
-## Carpeta Admin:
+#### Autenticación para Admin
 
-### Usuarios
+Para acceder a los endpoints de administración, se requiere autenticación mediante token, obtenido al iniciar sesión como admin:
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| POST    | `/admin/addUser` | Agregar un usuario(cliente) |
+| POST    | /auth/loginAdmin     | Login del admin |
 
-Ejemplo:
+**Resultado:**
+```json
+{
+    "message": "Inicio de sesión exitoso",
+    "userData": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2M3ZDY2MGU1ZTE3MGJmYWVmZmU3ODQiLCJpYXQiOjE3NDE0ODg3OTcsImV4cCI6MTc0MTQ5MjM5N30.GWu3TOzdgI7p5q-0_aCWlYSIM7qQHDw-Ne9fri_Norw"
+    }
+}
+```
+
+Este token debe incluirse en los encabezados de las solicitudes a los endpoints restringidos para administradores.
+
+![image](https://github.com/user-attachments/assets/64839012-62f3-4f79-bd9c-944cf33109b2)
+
+#### - Usuarios
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /admin/addUser | Agregar un usuario (cliente) |
+
+**Ejemplo:**
 ```json
 {
     "name": "Carlos",
@@ -137,27 +172,15 @@ Ejemplo:
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| GET    | `/admin/getUsers` | Listar todos los usuarios existentes del programa |
+| GET    | /admin/getUsers | Listar todos los usuarios existentes del programa |
 
-Para las operaciones de admin, se requiere autenticación con token. El token se obtiene tras el login del admin:
-
-Ejemplo de respuesta:
-```json
-{
-    "message": "Inicio de sesión exitoso",
-    "userData": {
-        "token": "<TOKEN_AQUI>"
-    }
-}
-```
-
-Este token se debe incluir en las peticiones para endpoints de admin.
+#### - Modificación de Usuarios
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| PATCH    | `/admin/editRoleUser/:cid` | Cambiar rol de usuario |
+| PATCH  | /admin/editRoleUser/:cid | Cambiar el rol de un usuario a ADMIN_ROLE |
 
-Ejemplo:
+**Ejemplo:**
 ```json
 {
     "role": "ADMIN_ROLE"
@@ -166,5 +189,102 @@ Ejemplo:
 
 | Método | Endpoint               | Descripción |
 |---------|------------------------|-------------|
-| DELETE  | `/admin/deleteUser/:cid` | Eliminar un usuario |
+| PUT    | /admin/editUser/:cid     | Editar la información de un usuario |
+
+**Ejemplo:**
+```json
+{
+    "name": "nuevos nombres",
+    "surname": "nuevos apellidos",
+    "username": "nuevo nombre de usuario",
+    "email": "nuevo correo",
+    "phone": "nuevo numero",
+    "password": "passWo#d123"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| DELETE  | /admin/deleteUser/:cid | Eliminar un usuario |
+
+---
+
+### - Categorías
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /category/addCategory  | Agregar una categoría |
+
+**Ejemplo:**
+```json
+{
+    "name": "Artículos para el hogar"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| GET     | /category/getCategories | Listar todas las categorías |
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| PUT     | /category/editCategory/:id | Editar una categoría |
+
+**Ejemplo:**
+```json
+{
+    "name": "Plomería",
+    "description": "En esta categoría solo se encontrarán cosas de plomería"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| DELETE  | /category/deleteCategory/:id | Eliminar una categoría |
+
+---
+
+### - Productos
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| POST    | /product/addProduct    | Agregar un producto |
+
+**Ejemplo:**
+```json
+{
+    "name": "Laptop HP",
+    "description": "Laptop con procesador Intel Core i7, 16GB RAM, 512GB SSD",
+    "price": 1200.99,
+    "stock": 50,
+    "category": "Electrónica"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| GET     | /product/getProducts   | Listar todos los productos |
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| PUT     | /product/editProduct/:id | Editar un producto |
+
+**Ejemplo:**
+```json
+{
+    "name": "Laptop HP ProBook",
+    "description": "Modelo actualizado con mejor rendimiento",
+    "price": 1300.99,
+    "stock": 40,
+    "category": "Electrónica"
+}
+```
+
+| Método | Endpoint               | Descripción |
+|---------|------------------------|-------------|
+| DELETE  | /product/deleteProduct/:id | Eliminar un producto |
+
+---
+
+Esta documentación detalla los endpoints de la sección de administración, cubriendo usuarios, categorías y productos. Si necesitas agregar más detalles o modificar algo, avísame.
 
